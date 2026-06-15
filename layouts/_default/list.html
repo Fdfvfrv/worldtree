@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+<div class="post-list">
+
+  {{ range where .Site.RegularPages "Section" "posts" }}
+  <article class="post-card">
+    <h2>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </h2>
+    <time>{{ .Date.Format "2006-01-02" }}</time>
+  </article>
+  {{ end }}
+
+</div>
+
+{{ end }}

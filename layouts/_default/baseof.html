@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    {{ if .IsHome }}
+      {{ .Site.Title }}
+    {{ else }}
+      {{ .Title }}
+    {{ end }}
+  </title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cn-font.claude-code-best.win/packages/hwmct/dist/汇文明朝体/result.css">
+  <link rel="stylesheet" href="https://cn-font.claude-code-best.win/packages/stdgt/dist/上图东观体-常规/result.css">
+</head>
+<body>
+
+  {{ if .IsHome }}
+  <header class="site-header">
+    <a class="site-title" href="/">{{ .Site.Title }}</a>
+    <nav>
+      <a href="/links/">河流</a>
+      <a href="/about/">关于</a>
+    </nav>
+  </header>
+
+  {{ end }}
+
+  <main class="site-main">
+    {{ block "main" . }}{{ end }}
+  </main>
+
+  <footer>
+    <p>© {{ now.Year }} Here is 37</p>
+  </footer>
+
+</body>
+</html>

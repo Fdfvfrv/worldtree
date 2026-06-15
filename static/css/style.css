@@ -1,0 +1,253 @@
+/* ============================================
+  主题变量
+   ============================================ */
+:root {
+  /* 文字 & 链接 */
+  --text-color: #28312a;
+  --link-color: #1e7e5c;
+  --secondary-color: #2c5541;
+
+  /* 中性色（边框 / 次要文字 / 行内代码背景） */
+  --color-border: #e5e5e5;
+  --color-muted: #888;
+  --color-footer: #aaa;
+  --color-quote: #555;
+  --code-bg: #f0f0f0;
+
+  /* 背景图 */
+  --bg-image: url("../img/bg-light.png");
+}
+
+@media (prefers-color-scheme: dark) {
+  /* 以下数值仅为示例，效果不满意可自行调整 */
+  :root {
+    --text-color: #d5e1dc;
+    --secondary-color: #aed1ba;
+
+    --color-border: #3a3a3a;
+    --color-muted: #999;
+    --color-footer: #777;
+    --color-quote: #aaa;
+    --code-bg: #2a2a2a;
+
+    --bg-image: url("../img/bg-dark.png");
+  }
+}
+
+/* ============================================
+  基础重置
+   ============================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ============================================
+  全局
+   ============================================ */
+body {
+  font-family: "Georgia", "Noto Serif SC", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: var(--text-color);
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  background: var(--bg-image) no-repeat center fixed;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  margin: 3rem 5rem;
+  border: none;
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(7, 84, 66, 0.6),
+    transparent
+  );
+}
+
+del {
+  text-decoration: none;
+  filter: blur(5px) grayscale(100%) opacity(40%);
+  transition: filter 0.1s ease;
+}
+del:hover {
+  filter: none;
+}
+
+strong {
+  border-bottom: 2px solid var(--secondary-color);
+}
+
+/* ============================================
+  头部
+   ============================================ */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: 3rem;
+}
+
+.site-title {
+  font:
+    bold 1.5rem "Huiwen-mincho",
+    serif;
+  color: var(--text-color);
+}
+
+nav a {
+  margin-left: 1.5rem;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+/* ============================================
+  文章列表
+   ============================================ */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.post-card a,
+.post-card p {
+  color: var(--text-color);
+}
+
+.post-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+
+.post-card time {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ============================================
+  文章详情
+   ============================================ */
+.post-header {
+  margin-bottom: 2rem;
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: 1.5rem;
+}
+
+.post-header h1 {
+  font-size: 2rem;
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+  text-align: center;
+  margin-top: 3vh;
+  font-family: "Huiwen-mincho", serif;
+}
+
+.post-header time {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+.post-content a,
+.post-header a {
+  color: var(--link-color);
+}
+
+.post-content h2 {
+  font-family: "STDongGuanTi", serif;
+  font-size: 1.5rem;
+  margin: 2rem 0 1rem;
+}
+.post-content h3 {
+  font-size: 1.2rem;
+  margin: 1.5rem 0 0.75rem;
+  text-align: center;
+}
+.post-content p {
+  margin-bottom: 1.25rem;
+}
+.post-content ul,
+.post-content ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+.post-content li {
+  margin-bottom: 0.25rem;
+}
+
+.post-content code {
+  background: var(--code-bg);
+  padding: 0.2em 0.4em;
+  border-radius: 3px;
+  font-size: 0.9em;
+  font-family: "Fira Code", "Courier New", monospace;
+}
+
+/* 代码块保持固定的深色配色，不随页面主题切换 */
+.post-content pre {
+  background: #1e1e2e;
+  color: #cdd6f4;
+  padding: 1.25rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1.25rem;
+}
+
+.post-content pre code {
+  background: none;
+  padding: 0;
+  font-size: 0.9em;
+}
+
+.post-content blockquote {
+  border-left: 4px solid var(--secondary-color);
+  padding-left: 1rem;
+  color: var(--color-quote);
+  font-style: italic;
+  margin-bottom: 1.25rem;
+}
+
+/* ============================================
+  底部
+   ============================================ */
+footer {
+  text-align: center;
+  padding: 3rem 0 2rem;
+  color: var(--color-footer);
+  font-size: 0.85rem;
+  margin-top: 4rem;
+}
+
+/* ============================================
+  响应式
+   ============================================ */
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+  .site-header {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  nav a:first-child {
+    margin-left: 0;
+  }
+  .post-header h1 {
+    font-size: 1.5rem;
+  }
+}

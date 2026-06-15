@@ -1,0 +1,4 @@
+baseURL = 'https://localhost:1313/'
+locale = 'zh-cn'
+title = 'The World of A Tree'
+
