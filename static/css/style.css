@@ -46,7 +46,7 @@
   全局
    ==== */
 body {
-  font-family: "Georgia", "Noto Serif SC", serif;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   font-size: 18px;
   line-height: 1.6;
   color: var(--text-color);
@@ -60,6 +60,10 @@ a {
   text-decoration: none;
 }
 
+p {
+  font-family: "SourceHanSerif", serif;
+}
+
 hr {
   margin: 3rem 5rem;
   border: none;
@@ -70,15 +74,6 @@ hr {
     rgba(7, 84, 66, 0.6),
     transparent
   );
-}
-
-del {
-  text-decoration: none;
-  filter: blur(5px) grayscale(80%) opacity(40%);
-  transition: filter 0.2s ease;
-}
-del:hover {
-  filter: none;
 }
 
 strong {
@@ -99,8 +94,11 @@ strong {
 
 .site-title {
   font:
-    bold var(--fsize-15) "Huiwen-mincho",
-    serif;
+    bold var(--fsize-15) "PingFang SC",
+    "Hiragino Sans GB",
+    "Microsoft YaHei",
+    "Noto Sans CJK SC",
+    sans-serif;
   color: var(--text-color);
 }
 
@@ -151,7 +149,7 @@ nav a {
   margin-bottom: 0.5rem;
   text-align: center;
   margin-top: 3vh;
-  font-family: "Huiwen-mincho", serif;
+  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
 }
 
 .post-header time {
@@ -184,6 +182,14 @@ nav a {
 }
 .post-content li {
   margin-bottom: 0.25rem;
+}
+.post-content del {
+  text-decoration: none;
+  filter: blur(5px) grayscale(80%) opacity(40%);
+  transition: filter 0.2s ease;
+}
+.post-content del:hover {
+  filter: none;
 }
 
 .post-content code {
@@ -249,6 +255,17 @@ footer a {
     font-size: var(--fsize-15);
   }
   .post-content h2 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
   }
+  .post-content h3 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 768px) {
+  .post-content del {
+    text-decoration: line-through;
+    color: var(--color-quote);
+    filter: none;
+    transition: none;
+}
 }
