@@ -192,11 +192,10 @@ nav a {
   border-radius: 3px;
   font-size: 0.9em;
   font-family: "Fira Code", "Courier New", monospace;
+  margin: 0.2em 0.4em;
 }
 
 .post-content pre {
-  background: var(--code-bg);
-  color: #cdd6f4;
   padding: 1.25rem;
   border-radius: 6px;
   overflow-x: auto;
@@ -226,6 +225,9 @@ footer {
   color: var(--color-footer);
   font-size: 0.85rem;
   margin-top: 4rem;
+}
+footer a {
+  color: var(--color-footer);
 }
 
 /* ======

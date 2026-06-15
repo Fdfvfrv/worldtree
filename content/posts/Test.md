@@ -1,6 +1,6 @@
 +++
 date = '2026-06-14T00:57:20+08:00'
-draft = true
+draft = false
 title = 'Test'
 +++
 ## \<h2>期末周赶紧结束
@@ -23,4 +23,6 @@ title = 'Test'
 ```c
 love & peace
 ```
+
+这是`code`。
 
