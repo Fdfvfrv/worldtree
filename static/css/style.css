@@ -1,31 +1,28 @@
-/* ============================================
+/* ========
   主题变量
-   ============================================ */
+   ======= */
 :root {
   /* 文字 & 链接 */
   --text-color: #28312a;
   --link-color: #1e7e5c;
   --secondary-color: #2c5541;
 
-  /* 中性色（边框 / 次要文字 / 行内代码背景） */
   --color-border: #e5e5e5;
-  --color-muted: #888;
   --color-footer: #aaa;
   --color-quote: #555;
   --code-bg: #f0f0f0;
 
-  /* 背景图 */
+  --fsize-15: 1.5rem;
+
   --bg-image: url("../img/bg-light.png");
 }
 
 @media (prefers-color-scheme: dark) {
-  /* 以下数值仅为示例，效果不满意可自行调整 */
   :root {
     --text-color: #d5e1dc;
     --secondary-color: #aed1ba;
 
     --color-border: #3a3a3a;
-    --color-muted: #999;
     --color-footer: #777;
     --color-quote: #aaa;
     --code-bg: #2a2a2a;
@@ -34,9 +31,9 @@
   }
 }
 
-/* ============================================
+/* =======
   基础重置
-   ============================================ */
+   ======= */
 *,
 *::before,
 *::after {
@@ -45,9 +42,9 @@
   padding: 0;
 }
 
-/* ============================================
+/* ====
   全局
-   ============================================ */
+   ==== */
 body {
   font-family: "Georgia", "Noto Serif SC", serif;
   font-size: 18px;
@@ -55,7 +52,7 @@ body {
   color: var(--text-color);
   max-width: 720px;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 var(--fsize-15);
   background: var(--bg-image) no-repeat center fixed;
 }
 
@@ -77,8 +74,8 @@ hr {
 
 del {
   text-decoration: none;
-  filter: blur(5px) grayscale(100%) opacity(40%);
-  transition: filter 0.1s ease;
+  filter: blur(5px) grayscale(80%) opacity(40%);
+  transition: filter 0.2s ease;
 }
 del:hover {
   filter: none;
@@ -88,9 +85,9 @@ strong {
   border-bottom: 2px solid var(--secondary-color);
 }
 
-/* ============================================
+/* =====
   头部
-   ============================================ */
+   ===== */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -102,20 +99,20 @@ strong {
 
 .site-title {
   font:
-    bold 1.5rem "Huiwen-mincho",
+    bold var(--fsize-15) "Huiwen-mincho",
     serif;
   color: var(--text-color);
 }
 
 nav a {
-  margin-left: 1.5rem;
+  margin-left: var(--fsize-15);
   color: var(--text-color);
   font-size: 0.95rem;
 }
 
-/* ============================================
+/* =======
   文章列表
-   ============================================ */
+   ======= */
 .post-list {
   display: flex;
   flex-direction: column;
@@ -136,12 +133,12 @@ nav a {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 0.85rem;
-  color: var(--color-muted);
+  color: var(--color-footer);
 }
 
-/* ============================================
+/* =======
   文章详情
-   ============================================ */
+   ======= */
 .post-header {
   margin-bottom: 2rem;
   border-bottom: 1px solid var(--color-border);
@@ -159,7 +156,7 @@ nav a {
 
 .post-header time {
   font-size: 0.9rem;
-  color: var(--color-muted);
+  color: var(--color-footer);
 }
 
 .post-content a,
@@ -169,7 +166,7 @@ nav a {
 
 .post-content h2 {
   font-family: "STDongGuanTi", serif;
-  font-size: 1.5rem;
+  font-size: var(--fsize-15);
   margin: 2rem 0 1rem;
 }
 .post-content h3 {
@@ -197,9 +194,8 @@ nav a {
   font-family: "Fira Code", "Courier New", monospace;
 }
 
-/* 代码块保持固定的深色配色，不随页面主题切换 */
 .post-content pre {
-  background: #1e1e2e;
+  background: var(--code-bg);
   color: #cdd6f4;
   padding: 1.25rem;
   border-radius: 6px;
@@ -221,9 +217,9 @@ nav a {
   margin-bottom: 1.25rem;
 }
 
-/* ============================================
+/* =====
   底部
-   ============================================ */
+   ===== */
 footer {
   text-align: center;
   padding: 3rem 0 2rem;
@@ -232,9 +228,9 @@ footer {
   margin-top: 4rem;
 }
 
-/* ============================================
+/* ======
   响应式
-   ============================================ */
+   ====== */
 @media (max-width: 600px) {
   body {
     font-size: 16px;
@@ -248,6 +244,9 @@ footer {
     margin-left: 0;
   }
   .post-header h1 {
-    font-size: 1.5rem;
+    font-size: var(--fsize-15);
+  }
+  .post-content h2 {
+    font-size: 1.3rem;
   }
 }
