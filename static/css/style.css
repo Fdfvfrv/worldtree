@@ -1,39 +1,54 @@
-/* ========
-  主题变量
-   ======= */
+/* var */
 :root {
-  /* 文字 & 链接 */
+  /* palatte */
   --text-color: #28312a;
   --link-color: #1e7e5c;
   --secondary-color: #2c5541;
-
-  --color-border: #e5e5e5;
-  --color-footer: #aaa;
-  --color-quote: #555;
+  --gray1: #e5e5e5;
+  --gray2: #aaa;
+  --gray3: #555;
   --code-bg: #f0f0f0;
-
+  /* font */
+  --serif-font-family: 
+    "Noto Serif", 
+    "Noto Serif SC", 
+    "Noto Serif TC", 
+    "Noto Serif CJK SC", 
+    "Noto Serif CJK TC", 
+    "Source Han Serif SC", 
+    "Source Han Serif TC", 
+    "Songti SC", 
+    "Times New Roman", 
+    Times, 
+    serif; 
+  --fangsong-font-family: 
+    'STFangsong', 
+    'FangSong', 
+    '仿宋', 
+    serif;
+  --heading-font:
+    'STDongGuanTi',
+    sans-serif;
+  /* size */
   --fsize-15: 1.5rem;
-
+  /* img */
   --bg-image: url("../img/bg-light.png");
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
+    /* palatte-dark */
     --text-color: #d5e1dc;
     --secondary-color: #aed1ba;
-
-    --color-border: #3a3a3a;
-    --color-footer: #777;
-    --color-quote: #aaa;
+    --gray1: #3a3a3a;
+    --gray2: #777;
+    --gray3: #aaa;
     --code-bg: #2a2a2a;
-
+    /* img-dark */
     --bg-image: url("../img/bg-dark.png");
   }
 }
 
-/* =======
-  基础重置
-   ======= */
 *,
 *::before,
 *::after {
@@ -42,13 +57,10 @@
   padding: 0;
 }
 
-/* ====
-  全局
-   ==== */
 body {
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  font-family: var(--serif-font-family);
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1.8;
   color: var(--text-color);
   max-width: 720px;
   margin: 0 auto;
@@ -58,10 +70,6 @@ body {
 
 a {
   text-decoration: none;
-}
-
-p {
-  font-family: "SourceHanSerif", serif;
 }
 
 hr {
@@ -80,25 +88,19 @@ strong {
   border-bottom: 2px solid var(--secondary-color);
 }
 
-/* =====
-  头部
-   ===== */
+/* site-header */
 .site-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 0;
-  border-bottom: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--gray1);
   margin-bottom: 3rem;
 }
 
 .site-title {
   font:
-    bold var(--fsize-15) "PingFang SC",
-    "Hiragino Sans GB",
-    "Microsoft YaHei",
-    "Noto Sans CJK SC",
-    sans-serif;
+    bold var(--fsize-15) var(--heading-font);
   color: var(--text-color);
 }
 
@@ -108,9 +110,7 @@ nav a {
   font-size: 0.95rem;
 }
 
-/* =======
-  文章列表
-   ======= */
+/* post-;list */
 .post-list {
   display: flex;
   flex-direction: column;
@@ -131,30 +131,28 @@ nav a {
   display: block;
   margin-bottom: 0.5rem;
   font-size: 0.85rem;
-  color: var(--color-footer);
+  color: var(--gray2);
 }
 
-/* =======
-  文章详情
-   ======= */
+/* post-content */
 .post-header {
   margin-bottom: 2rem;
-  border-bottom: 1px solid var(--color-border);
   padding-bottom: 1.5rem;
 }
 
 .post-header h1 {
+  filter: url(#x);
+  font-family: var(--heading-font);
   font-size: 2rem;
   color: var(--text-color);
   margin-bottom: 0.5rem;
   text-align: center;
   margin-top: 3vh;
-  font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
 }
 
 .post-header time {
   font-size: 0.9rem;
-  color: var(--color-footer);
+  color: var(--gray2);
 }
 
 .post-content a,
@@ -162,8 +160,12 @@ nav a {
   color: var(--link-color);
 }
 
+.post-content h1, .post-content h2, .post-content h3 {
+  font-family: var(--heading-font);
+}
+
 .post-content h2 {
-  font-family: "STDongGuanTi", serif;
+  font-family: var(--heading-font);
   font-size: var(--fsize-15);
   margin: 2rem 0 1rem;
 }
@@ -197,7 +199,7 @@ nav a {
   padding: 0.2em 0.4em;
   border-radius: 3px;
   font-size: 0.9em;
-  font-family: "Fira Code", "Courier New", monospace;
+  font-family: "Courier New", monospace;
   margin: 0.2em 0.4em;
 }
 
@@ -217,28 +219,24 @@ nav a {
 .post-content blockquote {
   border-left: 4px solid var(--secondary-color);
   padding-left: 1rem;
-  color: var(--color-quote);
+  color: var(--gray3);
   font-style: italic;
   margin-bottom: 1.25rem;
 }
 
-/* =====
-  底部
-   ===== */
+/* footer */
 footer {
   text-align: center;
   padding: 3rem 0 2rem;
-  color: var(--color-footer);
+  color: var(--gray2);
   font-size: 0.85rem;
   margin-top: 4rem;
 }
 footer a {
-  color: var(--color-footer);
+  color: var(--gray2);
 }
 
-/* ======
-  响应式
-   ====== */
+/* @media */
 @media (max-width: 600px) {
   body {
     font-size: 16px;
@@ -261,11 +259,12 @@ footer a {
     font-size: 1rem;
   }
 }
+
 @media (max-width: 768px) {
   .post-content del {
     text-decoration: line-through;
-    color: var(--color-quote);
+    color: var(--gray3);
     filter: none;
     transition: none;
-}
+  }
 }
