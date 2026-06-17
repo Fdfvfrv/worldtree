@@ -1,0 +1,73 @@
+/* links */
+.link-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 3em 7em;
+  margin-top: 3em;
+}
+.link-card {
+  position: relative;
+  transition: transform 0.2s ease;
+  margin: 0 -1rem;
+}
+.link-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(var(--link-color), var(--link-color)),
+    linear-gradient(var(--link-color), var(--link-color)),
+    linear-gradient(var(--link-color), var(--link-color)),
+    linear-gradient(var(--link-color), var(--link-color)),
+    linear-gradient(var(--link-color), var(--link-color)),
+    linear-gradient(var(--link-color), var(--link-color)),
+    linear-gradient(var(--link-color), var(--link-color)),
+    linear-gradient(var(--link-color), var(--link-color));
+  background-size:
+    3px 10px, 10px 3px,
+    3px 10px, 10px 3px,
+    3px 10px, 10px 3px,
+    3px 10px, 10px 3px;
+  background-position:
+    left top,    left top,
+    right top,   right top,
+    left bottom, left bottom,
+    right bottom,right bottom;
+  background-repeat: no-repeat;
+  opacity: 0.3;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+.link-card:hover {
+  transform: scale(1.1);
+  filter: contrast(150%);
+  cursor: zoom-in;
+}
+.link-card:hover::before { 
+  opacity: 1;
+}
+.link-card a {
+  color: var(--link-color);
+  font-size: var(--len-10);
+  display: block;
+  text-align: center;
+  margin-bottom: 0.35rem;
+}
+.link-card p {
+  font-size: 0.9rem;
+  font-family: var(--fangsong-font-family);
+  text-align: center;
+  vertical-align: middle;
+  padding: 0 var(--len-15);
+  line-height: 1.5;
+  filter: grayscale(5%);
+}
+@media (max-width: 768px) {
+  .link-list {
+  gap: var(--len-10);
+  margin-top: var(--len-15);
+}
+  .link-card::before {
+    display: none;
+  }
+}

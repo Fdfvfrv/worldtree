@@ -1,0 +1,10 @@
+<section class="link-list">
+  {{ range hugo.Data.links }}
+  <div class="link-card">
+    <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+      {{ .name }}
+    </a>
+    {{ with .desc }}<p>{{ . }}</p>{{ end }}
+  </div>
+  {{ end }}
+</section>

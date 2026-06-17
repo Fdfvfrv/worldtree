@@ -1,21 +1,27 @@
 {{ define "main" }}
 
-<div class="post-list">
-
-  {{ range where .Site.RegularPages "Section" "posts" }}
-  <article class="post-card">
-    <h2>
-      <a href="{{ .Permalink }}">{{ .Title }}</a>
-    </h2>
-    {{ if .Summary }}
-      <summary>{{ .Summary }}</summary>
+{{ if .IsHome }}
+  <div class="post-list">
+    {{ range where .Site.RegularPages "Section" "posts" }}
+    <article class="post-card">
+      <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+      {{ if .Summary }}<summary>{{ .Summary }}</summary>{{ end }}
+    </article>
     {{ end }}
-    {{ if .Params.excerpt }}
-      <summary>{{ .Params.excerpt }}</summary>
-    {{ end }}
-  </article>
-  {{ end }}
+  </div>
 
-</div>
+{{ else }}
+  <div class="post-list">
+    <h1><a href="/">{{ .Title }}</a></h1>
+    {{ .Content }}
+    {{ range .Pages }}
+    <article class="post-card">
+      <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+      {{ if .Summary }}<summary>{{ .Summary }}</summary>{{ end }}
+    </article>
+    {{ end }}
+  </div>
+
+{{ end }}
 
 {{ end }}
