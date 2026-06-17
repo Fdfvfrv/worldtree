@@ -1,11 +1,12 @@
 /* var */
 :root {
   /* palatte */
+  --heading-color: #152523;
   --text-color: #28312a;
   --link-color: #1e7e5c;
-  --secondary-color: #2c5541;
+  --highlight-color: #2c5541;
   --gray1: #e5e5e5;
-  --gray2: #aaa;
+  --gray2: #a1a0a0;
   --gray3: #555;
   --code-bg: #f0f0f0;
   /* font */
@@ -26,11 +27,18 @@
     'FangSong', 
     '仿宋', 
     serif;
+  --monospace-font-family: 
+    'Menlo', 
+    Consolas, 
+    'Courier New', 
+    monospace;
   --heading-font:
     'STDongGuanTi',
     sans-serif;
-  /* size */
-  --fsize-15: 1.5rem;
+  /* length */
+  --len-10: 1rem;
+  --len-12: 1.2rem;
+  --len-15: 1.5rem;
   /* img */
   --bg-image: url("../img/bg-light.png");
 }
@@ -38,8 +46,9 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* palatte-dark */
-    --text-color: #d5e1dc;
-    --secondary-color: #aed1ba;
+    --heading-color: #beddd0;
+    --text-color: #b0c1bb;
+    --highlight-color: #8ba293;
     --gray1: #3a3a3a;
     --gray2: #777;
     --gray3: #aaa;
@@ -57,14 +66,18 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--serif-font-family);
   font-size: 18px;
   line-height: 1.8;
   color: var(--text-color);
-  max-width: 720px;
+  max-width: 700px;
   margin: 0 auto;
-  padding: 0 var(--fsize-15);
+  padding: 0 var(--len-15);
   background: var(--bg-image) no-repeat center fixed;
 }
 
@@ -85,7 +98,7 @@ hr {
 }
 
 strong {
-  border-bottom: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--highlight-color);
 }
 
 /* site-header */
@@ -100,17 +113,17 @@ strong {
 
 .site-title {
   font:
-    bold var(--fsize-15) var(--heading-font);
+    bold var(--len-15) var(--heading-font);
   color: var(--text-color);
 }
 
 nav a {
-  margin-left: var(--fsize-15);
+  margin-left: var(--len-15);
   color: var(--text-color);
   font-size: 0.95rem;
 }
 
-/* post-;list */
+/* post-list */
 .post-list {
   display: flex;
   flex-direction: column;
@@ -127,31 +140,28 @@ nav a {
   margin-bottom: 0.25rem;
 }
 
-.post-card time {
-  display: block;
+.post-card summary {
+  font-family: var(--fangsong-font-family);
   margin-bottom: 0.5rem;
-  font-size: 0.85rem;
-  color: var(--gray2);
+  color: var(--gray3);
 }
 
 /* post-content */
 .post-header {
-  margin-bottom: 2rem;
-  padding-bottom: 1.5rem;
+  margin-bottom: var(--len-10);
+  padding-bottom: var(--len-10);
 }
-
 .post-header h1 {
-  filter: url(#x);
   font-family: var(--heading-font);
   font-size: 2rem;
-  color: var(--text-color);
+  color: var(--heading-color);
   margin-bottom: 0.5rem;
   text-align: center;
   margin-top: 3vh;
 }
-
 .post-header time {
   font-size: 0.9rem;
+  font-family: var(--monospace-font-family);
   color: var(--gray2);
 }
 
@@ -159,28 +169,26 @@ nav a {
 .post-header a {
   color: var(--link-color);
 }
-
 .post-content h1, .post-content h2, .post-content h3 {
   font-family: var(--heading-font);
+  color: var(--heading-color);
 }
-
 .post-content h2 {
-  font-family: var(--heading-font);
-  font-size: var(--fsize-15);
-  margin: 2rem 0 1rem;
+  font-size: var(--len-15);
+  margin: 2rem 0 var(--len-10);
 }
 .post-content h3 {
-  font-size: 1.2rem;
-  margin: 1.5rem 0 0.75rem;
+  font-size: var(--len-12);
+  margin: var(--len-15) 0 0.75rem;
   text-align: center;
 }
 .post-content p {
-  margin-bottom: 1.25rem;
+  margin-bottom: var(--len-12);
 }
 .post-content ul,
 .post-content ol {
-  padding-left: 1.5rem;
-  margin-bottom: 1.25rem;
+  padding-left: 2.5rem;
+  margin-bottom: var(--len-12);
 }
 .post-content li {
   margin-bottom: 0.25rem;
@@ -193,35 +201,34 @@ nav a {
 .post-content del:hover {
   filter: none;
 }
+.post-content blockquote {
+  color: var(--gray3);
+  font-family: var(--fangsong-font-family);
+  margin-bottom: var(--len-15);
+  padding-left: var(--len-12);
+  border-left: 1px dashed var(--gray2);
+}
 
+.post-content code, .post-content pre span, .post-content pre code {
+  font-family: var(--monospace-font-family);
+  font-size: 0.9rem;
+}
 .post-content code {
   background: var(--code-bg);
   padding: 0.2em 0.4em;
   border-radius: 3px;
-  font-size: 0.9em;
-  font-family: "Courier New", monospace;
   margin: 0.2em 0.4em;
 }
-
 .post-content pre {
-  padding: 1.25rem;
+  filter: saturate(0.8);
+  padding: var(--len-10);
   border-radius: 6px;
   overflow-x: auto;
-  margin-bottom: 1.25rem;
+  margin-bottom: var(--len-12);
 }
-
 .post-content pre code {
   background: none;
   padding: 0;
-  font-size: 0.9em;
-}
-
-.post-content blockquote {
-  border-left: 4px solid var(--secondary-color);
-  padding-left: 1rem;
-  color: var(--gray3);
-  font-style: italic;
-  margin-bottom: 1.25rem;
 }
 
 /* footer */
@@ -243,20 +250,37 @@ footer a {
   }
   .site-header {
     flex-direction: column;
-    gap: 1.5rem;
+    gap: var(--len-15);
     text-align: center;
   }
   nav a:first-child {
     margin-left: 0;
   }
+  .post-card:nth-child(even) {
+    position: relative;
+    align-self: flex-end;
+  }
+  .post-card:nth-child(even) h2, .post-card:nth-child(even) summary {
+    text-align: right;
+  }
   .post-header h1 {
-    font-size: var(--fsize-15);
+    font-size: var(--len-15);
   }
   .post-content h2 {
-    font-size: 1.2rem;
+    font-size: var(--len-12);
   }
   .post-content h3 {
-    font-size: 1rem;
+    font-size: var(--len-10);
+  }
+  .post-content blockquote {
+    padding-left: 0.5rem;
+  }
+  .post-content code, .post-content pre, .post-content pre code {
+    font-size: 14px;
+  }
+  .post-content pre {
+    padding: 0.5rem;
+    margin-bottom: var(--len-10);
   }
 }
 

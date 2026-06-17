@@ -3,14 +3,13 @@
 <article class="post">
   <header class="post-header">
     <a href="/"><h1>{{ .Title }}</h1></a>
-    {{ if not .Date.IsZero }}
-    <time>{{ .Date.Format "2006年01月02日" }}</time>
+    {{ if not .Date.IsZero}}
+    <time>{{ .Date.Format "2006-01-02 Mon" }}</time>
     {{ end }}
   </header>
-
-  <div class="post-content">
+  <article class="post-content">
     {{ .Content }}
-  </div>
+  </article>
 </article>
 
 {{ end }}

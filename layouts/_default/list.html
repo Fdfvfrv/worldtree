@@ -7,7 +7,12 @@
     <h2>
       <a href="{{ .Permalink }}">{{ .Title }}</a>
     </h2>
-    <time>{{ .Date.Format "2006-01-02" }}</time>
+    {{ if .Summary }}
+      <summary>{{ .Summary }}</summary>
+    {{ end }}
+    {{ if .Params.excerpt }}
+      <summary>{{ .Params.excerpt }}</summary>
+    {{ end }}
   </article>
   {{ end }}
 
