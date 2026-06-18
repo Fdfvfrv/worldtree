@@ -9,6 +9,7 @@
   position: relative;
   transition: transform 0.2s ease;
   margin: 0 -1rem;
+  filter: grayscale(60%) blur(1px);
 }
 .link-card::before {
   content: '';
@@ -35,13 +36,12 @@
     right bottom,right bottom;
   background-repeat: no-repeat;
   opacity: 0.3;
-  transition: opacity 0.25s ease;
+  transition: opacity 0.5s ease;
   pointer-events: none;
 }
 .link-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
   filter: contrast(150%);
-  cursor: zoom-in;
 }
 .link-card:hover::before { 
   opacity: 1;
@@ -60,13 +60,15 @@
   vertical-align: middle;
   padding: 0 var(--len-15);
   line-height: 1.5;
-  filter: grayscale(5%);
 }
 @media (max-width: 768px) {
   .link-list {
   gap: var(--len-10);
   margin-top: var(--len-15);
 }
+  .link-card {
+    filter: none;
+  }
   .link-card::before {
     display: none;
   }
