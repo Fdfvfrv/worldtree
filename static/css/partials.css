@@ -77,24 +77,25 @@
 /* books */
 .book-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 3fr));
+  grid-template-columns: 1fr 1fr 1fr;
   gap: var(--len-10);
   margin-top: 3em;
   justify-content: center;
 }
 .book-card {
+  position: relative;
   justify-self: center;
   align-self: center;
 }
-.book-card img {
+.book-list .book-card img {
   display: block;
   justify-self: center;
   margin-bottom: 5px;
-  max-width: 130px;
-  height: auto;
+  max-width: 130px !important;
+  height: auto !important;
   transition: translate 0.2s, box-shadow 0.3s;
 }
-.book-card img:hover {
+.book-list .book-card img:hover {
   box-shadow: 5px 5px 0 #f4f1f1;
   translate: -2px -2px;
 }
@@ -123,7 +124,7 @@
   display: block;
   justify-self: center;
   margin-bottom: 5px;
-  max-width: 130px;
+  max-width: 130px !important;
   height: auto;
 }
 .video-card .video-intro {
