@@ -36,6 +36,7 @@
     'STDongGuanTi',
     sans-serif;
   /* length */
+  --len-05: 0.5rem;
   --len-10: 1rem;
   --len-12: 1.2rem;
   --len-15: 1.5rem;
@@ -186,7 +187,7 @@ nav a {
 
 .post-card summary {
   font-family: var(--fangsong-font-family);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--len-05);
   color: var(--gray2);
 }
 
@@ -210,7 +211,7 @@ footer a {
   font-family: var(--heading-font);
   font-size: 2rem;
   color: var(--heading-color);
-  margin-bottom: 0.5rem;
+  margin-bottom: var(--len-05);
   text-align: center;
   margin-top: 3vh;
 }
@@ -320,13 +321,13 @@ footer a {
     font-size: var(--len-10);
   }
   .post-content blockquote {
-    padding-left: 0.5rem;
+    padding-left: var(--len-05);
   }
   .post-content code, .post-content pre, .post-content pre code {
     font-size: 14px;
   }
   .post-content pre {
-    padding: 0.5rem;
+    padding: var(--len-05);
     margin-bottom: var(--len-10);
   }
 }

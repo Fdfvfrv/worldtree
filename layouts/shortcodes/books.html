@@ -1,0 +1,10 @@
+<section class="book-list">
+  {{ range $books := hugo.Data.books }}
+  <div class="book-card">
+    <img src="{{ .cover }}" alt="{{ .title }}"/>
+    <p class="book-intro">
+      {{ .title }}<br>[{{ .author }}]
+    </p>
+  </div>
+  {{ end }}
+</section>
