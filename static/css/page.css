@@ -42,7 +42,6 @@
   /* img */
   --bg-image: url("../img/bg-light.png");
 }
-
 @media (prefers-color-scheme: dark) {
   :root {
     /* palatte-dark */
@@ -56,6 +55,27 @@
     /* img-dark */
     --bg-image: url("../img/bg-dark.png");
   }
+}
+:root[color-mode="light"] {
+  --heading-color: #152523;
+  --text-color: #28312a;
+  --link-color: #1e7e5c;
+  --highlight-color: #445d51;
+  --deco-color: #cadcd3;
+  --gray1: #a1a0a0;
+  --gray2: #555;
+  --code-bg: #f0f0f0;
+  --bg-image: url("../img/bg-light.png");
+}
+:root[color-mode="dark"] {
+  --heading-color: #beddd0;
+  --text-color: #b0c1bb;
+  --highlight-color: #8ba293;
+  --deco-color: #0e1511;
+  --gray1: #777;
+  --gray2: #aaa;
+  --code-bg: #2a2a2a;
+  --bg-image: url("../img/bg-dark.png");
 }
 
 *,
@@ -86,7 +106,7 @@ a {
 }
 
 hr {
-  margin: 3rem 5rem;
+  margin: 5em 3rem 3rem;
   border: none;
   height: 1px;
   background: linear-gradient(
@@ -123,6 +143,13 @@ nav a {
   font-size: 0.95rem;
 }
 
+#theme-select {
+  background: none;
+  border: none;
+  font-size: var(--len-10);
+  color: var(--gray1);
+}
+
 /* post-list */
 .post-list {
   display: flex;
@@ -139,7 +166,10 @@ nav a {
 .post-list h1::before {
   content: "▸ ";
 }
-
+.post-list p {
+  font-family: var(--fangsong-font-family);
+  text-align: center;
+}
 .post-list a {
   color: var(--highlight-color);
 }
@@ -160,6 +190,17 @@ nav a {
   color: var(--gray2);
 }
 
+/* footer */
+footer {
+  text-align: center;
+  margin: 3rem 0 2rem;
+  color: var(--gray1);
+  font-size: 0.85rem;
+}
+footer a {
+  color: var(--gray1);
+}
+
 /* post-content */
 .post-header {
   margin-bottom: var(--len-10);
@@ -173,10 +214,16 @@ nav a {
   text-align: center;
   margin-top: 3vh;
 }
-.post-header time {
+.post-header create-time,
+.post-content lamod-time {
   font-size: 0.9rem;
   font-family: var(--monospace-font-family);
   color: var(--gray1);
+}
+.post-content lamod-time {
+  margin: 2rem 0;
+  display: block;
+  text-align: right;
 }
 
 .post-content a,
@@ -208,6 +255,9 @@ nav a {
 }
 .post-content li {
   margin-bottom: 0.25rem;
+}
+.post-content .footnotes {
+  font-family: var(--fangsong-font-family);
 }
 .post-content del {
   text-decoration: none;
@@ -247,18 +297,6 @@ nav a {
   padding: 0;
 }
 
-/* footer */
-footer {
-  text-align: center;
-  padding: 3rem 0 2rem;
-  color: var(--gray1);
-  font-size: 0.85rem;
-  margin-top: 4rem;
-}
-footer a {
-  color: var(--gray1);
-}
-
 /* @media */
 @media (max-width: 600px) {
   body {
@@ -266,7 +304,7 @@ footer a {
   }
   .site-header {
     flex-direction: column;
-    gap: var(--len-15);
+    gap: var(--len-10);
     text-align: center;
   }
   nav a:first-child {

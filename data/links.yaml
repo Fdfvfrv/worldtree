@@ -1,15 +1,15 @@
 - name: "極客死亡計劃"
   url: "https://www.geedea.pro/"
-  desc: "欢迎来访，这里只有真情流露和赤裸的思考。"
+  intro: "欢迎来访，这里只有真情流露和赤裸的思考。"
 
 - name: "Garden of Outlier"
   url: "https://chlo.is"
-  desc: "An Element-chan who writes."
+  intro: "An Element-chan who writes."
 
 - name: "伏枥之间"
   url: "https://leehenry.top/"
-  desc: "何妨吟啸且徐行"
+  intro: "何妨吟啸且徐行"
 
 - name: "SO AZY!"
   url: "https://blog.solazy.me/"
-  desc: "Just a Lazy Sol"
+  intro: "Just a Lazy Sol"

@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
+  <script>
+    (function() {
+      var saved = localStorage.getItem('color-scheme');
+      if (saved === 'light' || saved === 'dark') {
+        document.documentElement.setAttribute('color-mode', saved);
+      }
+    })();
+  </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>
@@ -18,6 +26,11 @@
   {{ if .IsHome }}
   <header class="site-header">
     <a class="site-title" href="/">{{ .Site.Title }}</a>
+    <select id="theme-select" aria-label="颜色模式">
+      <option value="auto">☯︎</option>
+      <option value="light">☀︎</option>
+      <option value="dark">☾</option>
+    </select>
     <nav>
       <a href="/links/">果壳铃</a>
       <a href="/about/">树</a>
@@ -31,12 +44,30 @@
     {{ block "main" . }}{{ end }}
   </main>
 
+
+  {{ if .IsHome }}
   <footer>
     <p>© {{ now.Year }} Here is 37 </p>
     <p>内容采用
     <a rel="license" href="{{ .Site.Params.licenseURL }}" target="_blank">{{ .Site.Params.license }}</a>
     许可</p>
   </footer>
+  {{ end }}
+
+  <script>
+    var select = document.getElementById('theme-select');
+    select.value = localStorage.getItem('color-scheme') || 'auto';
+    select.addEventListener('change', function() {
+      var value = select.value;
+      if (value === 'auto') {
+        document.documentElement.removeAttribute('color-mode');
+        localStorage.removeItem('color-scheme');
+      } else {
+        document.documentElement.setAttribute('color-mode', value);
+        localStorage.setItem('color-scheme', value);
+      }
+    });
+  </script>
 
 </body>
 </html>
