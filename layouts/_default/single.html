@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-<article class="post">
+<article>
   <header class="post-header">
     <a href="/"><h1>{{ .Title }}</h1></a>
     {{ if not .Date.IsZero}}
@@ -10,7 +10,9 @@
   <article class="post-content">
     {{ .Content }}
     {{ if not .Date.IsZero}}
-    <lamod-time>{{ .Lastmod.Format "最后更新于2006年01月02日" }}</lamod-time>
+    <lamod-time>
+      <a href="/">> </a>{{ .Lastmod.Format "最后更新于2006年01月02日" }}
+    </lamod-time>
     {{ end }}
   </article>
 </article>

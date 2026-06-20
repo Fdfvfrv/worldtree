@@ -215,6 +215,9 @@ footer a {
   text-align: center;
   margin-top: 3vh;
 }
+.post-content {
+  margin-bottom: 10vh;
+}
 .post-header create-time,
 .post-content lamod-time {
   font-size: 0.9rem;
@@ -222,7 +225,7 @@ footer a {
   color: var(--gray1);
 }
 .post-content lamod-time {
-  margin: 2rem 0;
+  margin-top: 5vh;
   display: block;
   text-align: right;
 }
