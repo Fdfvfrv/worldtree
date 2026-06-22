@@ -1,6 +1,7 @@
 baseURL = 'https://hereis37.top/'
 locale = 'zh-cn'
 title = 'The World of A Tree'
+enableGitInfo = true
 refLinksErrorLevel = "ERROR"
 [params]
   license = "CC BY-SA 4.0"

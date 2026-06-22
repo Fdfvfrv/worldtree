@@ -9,11 +9,9 @@
   </header>
   <article class="post-content">
     {{ .Content }}
-    {{ if not .Date.IsZero}}
     <lamod-time>
-      <a href="/">> </a>{{ .Lastmod.Format "最后更新于2006年01月02日" }}
+      <a href="/">> </a>{{ .Lastmod.Format "最后修改于2006年01月02日15时04分" }}
     </lamod-time>
-    {{ end }}
   </article>
 </article>
 

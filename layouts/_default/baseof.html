@@ -18,8 +18,9 @@
       {{ .Title }}
     {{ end }}
   </title>
-  <link rel="stylesheet" href="/css/page.css">
-  <link rel="stylesheet" href="/css/partials.css">
+  {{ $page := resources.Get "css/page.scss" | css.Sass | fingerprint }}
+  <link rel="stylesheet" href="{{ $page.RelPermalink }}">
+  <link rel="stylesheet" href="/css/shortcodes.css">
 </head>
 <body>
 
