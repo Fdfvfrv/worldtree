@@ -1,0 +1,7 @@
+<section class="movie-list">
+  {{ range $movies := hugo.Data.movies }}
+  <div class="movie-card">
+    <img src="{{ .cover }}" alt="{{ .title }}"/>
+  </div>
+  {{ end }}
+</section>

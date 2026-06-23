@@ -1,0 +1,66 @@
+/* site-header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--len-20) 0;
+  border-bottom: 1px solid var(--deco-color);
+  margin-bottom: var(--len-20);
+}
+.site-title {
+  font: bold var(--len-15) var(--heading-font);
+  color: var(--text-color);
+}
+nav a {
+  margin-left: var(--len-15);
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+
+/* post-list */
+.post-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.post-list h1 {
+  font-family: var(--heading-font);
+  font-size: var(--len-15);
+  color: var(--highlight-color);
+  margin: var(--len-15) 0 var(--len-10);
+}
+.post-list h1::before {
+  content: "▸ ";
+}
+.post-list p {
+  font-family: var(--fangsong-font-family);
+  text-align: center;
+}
+.post-list a {
+  color: var(--highlight-color);
+}
+.post-card a,
+.post-card p {
+  color: var(--text-color);
+}
+.post-card h2 {
+  font-size: 1.3rem;
+  margin-bottom: 0.25rem;
+}
+.post-card summary {
+  font-family: var(--fangsong-font-family);
+  margin-bottom: var(--len-05);
+  color: var(--gray2);
+}
+
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    gap: var(--len-05);
+    margin-bottom: 0;
+    text-align: center;
+  }
+  nav a:first-child {
+    margin-left: 0;
+  }
+}

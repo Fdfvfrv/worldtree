@@ -18,12 +18,12 @@
       {{ .Title }}
     {{ end }}
   </title>
-  {{ $page := resources.Get "css/page.scss" | css.Sass | fingerprint }}
-  <link rel="stylesheet" href="{{ $page.RelPermalink }}">
-  <link rel="stylesheet" href="/css/shortcodes.css">
+  {{ $sassOptions := dict "transpiler" "dartsass" "enableSourceMap" true }}
+  {{- with resources.Get "sass/page.scss" | css.Sass $sassOptions | resources.Minify | resources.Fingerprint -}}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  {{- end -}}
 </head>
 <body>
-
   {{ if .IsHome }}
   <header class="site-header">
     <a class="site-title" href="/">{{ .Site.Title }}</a>
@@ -38,20 +38,20 @@
       <a href="/fun/">根系</a>
     </nav>
   </header>
-
   {{ end }}
 
   <main class="site-main">
     {{ block "main" . }}{{ end }}
   </main>
 
-
   {{ if .IsHome }}
+  <hr>
   <footer>
     <p>© {{ now.Year }} Here is 37 </p>
     <p>内容采用
     <a rel="license" href="{{ .Site.Params.licenseURL }}" target="_blank">{{ .Site.Params.license }}</a>
     许可</p>
+    <p>源码开源于<a href="https://github.com/Fdfvfrv/worldtree"> Git Hub</a></p>
   </footer>
   {{ end }}
 

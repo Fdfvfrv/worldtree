@@ -18,14 +18,14 @@ summary = ' '
 - ZSH 框架：[Oh My Zsh](https://ohmyz.sh/) [^3]
 - 包管理器：[Homebrew](https://brew.sh/)  [^4]
 
-  > *顺带一提，以下软件都可以由 Homebrew 管理*
+  > *以下软件都可以由 Homebrew 管理*
 
 ### GUI
 **非常工具的工具**
 - 终端：[iTerm2](https://iterm2.com/)
 - 按键映射：[Karabiner-Elements](https://karabiner-elements.pqrs.org/)
 - 音视频播放器：[IINA](https://iina.io/)
-- 音频处理：[kid3](https://kid3.kde.org/)
+- 音频元数据编辑：[kid3](https://kid3.kde.org/)
 - 剪贴板管理：[Maccy](https://maccy.app/)
 - 解压/压缩：[Keka](https://www.keka.io/en/)
 

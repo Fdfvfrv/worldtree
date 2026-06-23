@@ -1,0 +1,25 @@
+{
+  "name": "worldtree",
+  "version": "1.0.0",
+  "description": "本站代码采用 [MIT 许可](LICENSE)。 博客文章内容采用 [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.zh) 许可。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "hugo --minify"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fdfvfrv/worldtree.git"
+  },
+  "keywords": [],
+  "author": "37",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Fdfvfrv/worldtree/issues"
+  },
+  "homepage": "https://github.com/Fdfvfrv/worldtree#readme",
+  "devDependencies": {
+    "sass": "^1.101.0"
+  }
+}
