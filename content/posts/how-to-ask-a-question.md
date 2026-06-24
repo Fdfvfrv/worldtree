@@ -50,7 +50,13 @@ summary =  ' '
 print("Hello World")
 # output: Hello World
 ```
-
+```css
+.post-content lamod-time {
+  margin-top: 5vh;
+  display: block;
+  text-align: right;
+}
+```
 即使你将代码完整地复制下来，并尝试运行，也可能出现各种错误：没有配环境、缺失某个依赖、版本不支持……甚至是因为在 IDLE 里直接粘贴代码[^3]。
 
 而一无所知的情况下，提问时我们能做的只有：贴上代码、贴上报错截图，并希冀着碰上某个闲着没事干又相当热心肠且耐心的好人你问我答。

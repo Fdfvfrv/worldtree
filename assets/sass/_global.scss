@@ -124,13 +124,11 @@ strong {
   border-bottom: 2px solid var(--highlight-color);
 }
 footer {
-  text-align: center;
+  display: flex;
+  justify-content: space-between;
   margin: 3rem 0 var(--len-20);
   color: var(--gray1);
-  font-size: 0.85rem;
-}
-footer a {
-  color: var(--gray1);
+  font-size: var(--len-10);
 }
 
 @media (max-width: 768px) {

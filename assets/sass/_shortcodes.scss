@@ -65,13 +65,18 @@
   .link-list {
   gap: var(--len-10);
   margin-top: var(--len-15);
+  }
 }
-  .link-card {
+@media (max-width: 1024px) {
+  .link-card, .link-card:hover {
     filter: none;
   }
-  .link-card:hover::before {
-  display: none;
-}
+  .link-card:hover {
+    transform: none;
+  }
+  .link-card::before {
+    display: none;
+  }
 }
 /* fun */
 .fun-list {
@@ -96,10 +101,8 @@
 @media (max-width: 600px) {
   .fun-card img {
     max-width: 100px;
-  }
-}
-@media (max-width: 600px) {
   .fun-card .fun-intro {
     font-size: 0.6rem;
+  }
   }
 }
