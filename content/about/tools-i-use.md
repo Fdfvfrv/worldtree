@@ -1,5 +1,4 @@
 +++
-date = '2026-06-19T01:40:55+08:00'
 draft = false
 title = '工具集锦'
 summary = ' '
@@ -28,6 +27,7 @@ summary = ' '
 - 音频元数据编辑：[kid3](https://kid3.kde.org/)
 - 剪贴板管理：[Maccy](https://maccy.app/)
 - 解压/压缩：[Keka](https://www.keka.io/en/)
+- 防火墙：[LuLu](https://objective-see.org/products/lulu.html)
 
 **有点情感的工具**
 - 电子书管理：[Calibre](https://calibre-ebook.com/) [^5]

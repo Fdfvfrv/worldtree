@@ -119,3 +119,8 @@
     transition: none;
   }
 }
+@media (max-width: 600px) {
+  .post-content .footnotes ol {
+    padding-left: var(--len-15);
+  }
+}
