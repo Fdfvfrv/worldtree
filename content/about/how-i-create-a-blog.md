@@ -4,7 +4,7 @@ title = '一棵树是怎样诞生的'
 summary = ' '
 weight = 1
 +++
-本站内容采用[CC BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)许可，源码以[MIT协议](https://mit-license.org/)开源于 [Git Hub](https://github.com/Fdfvfrv/worldtree)。
+本站内容采用[CC BY-SA-4.0](https://creativecommons.org/licenses/by-sa/4.0/deed.en)许可，源码以[MIT协议](https://mit-license.org/)开源于[Git Hub](https://github.com/Fdfvfrv/worldtree)。
 ## 网站设计
 > 我喜欢简洁、明快、利落的事物，这棵树的设计当然也遵循我的美学理念。
 - 视觉引导：文本指引，减少图块。

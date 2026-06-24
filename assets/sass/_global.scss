@@ -52,8 +52,7 @@ $dark: (
   serif;
   --monospace-font-family: 
   'Menlo', 
-  Consolas, 
-  'Courier New', 
+  'Monaco', 
   monospace;
   --heading-font:
   'STDongGuanTi',
@@ -127,10 +126,13 @@ footer {
   display: flex;
   justify-content: space-between;
   margin: 3rem 0 var(--len-20);
-  color: var(--gray1);
-  font-size: var(--len-10);
 }
-
+footer p, footer a {
+  color: var(--gray1);
+  font-family: var(--fangsong-font-family);
+  font-size: var(--len-10);
+  letter-spacing: 1px;
+}
 @media (max-width: 768px) {
   :root {
     --text-size: 16px;

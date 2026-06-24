@@ -12,7 +12,7 @@
 
 {{ else }}
   <div class="post-list">
-    <h1><a href="/">{{ .Title }}</a></h1>
+    <a href="/"><h1>{{ .Title }}</h1></a>
     {{ .Content }}
     {{ range .Pages }}
     <article class="post-card">

@@ -7,19 +7,18 @@
   font-family: var(--heading-font);
   font-size: var(--len-20);
   color: var(--heading-color);
-  margin-bottom: var(--len-05);
+  margin: var(--len-20) 0;
   text-align: center;
-  margin-top: 3vh;
 }
 /* post-content */
-.post-header create-time,
-.post-content lamod-time {
-  font-size: 0.9rem;
-  font-family: var(--monospace-font-family);
-  color: var(--gray1);
-}
 .post-content {
   margin-bottom: 10vh;
+}
+.post-header create-time,
+.post-content lamod-time {
+  font-size: var(--len-10);
+  font-family: var(--monospace-font-family);
+  color: var(--gray1);
 }
 .post-content lamod-time {
   margin-top: 5vh;
@@ -68,11 +67,13 @@
   filter: none;
 }
 .post-content blockquote {
-  color: var(--gray2);
-  font-family: var(--fangsong-font-family);
   margin: var(--len-05) 0 var(--len-15) 0;
   padding-left: var(--len-12);
   border-left: 1px dashed var(--gray1);
+}
+.post-content blockquote p {
+  color: var(--gray2);
+  font-family: var(--fangsong-font-family);
 }
 .post-content code, .post-content pre span, .post-content pre code {
   font-family: var(--monospace-font-family);
