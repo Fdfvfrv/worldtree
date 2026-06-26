@@ -41,8 +41,8 @@ weight = 1
     serif;
 --monospace-font-family: 
     'Menlo', 
+    'Monaco',
     Consolas, 
-    'Courier New', 
     monospace;
 --heading-font:
     'STDongGuanTi',

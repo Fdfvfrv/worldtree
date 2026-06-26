@@ -88,6 +88,9 @@ html {
   scroll-behavior: smooth;
 }
 
+@view-transition {
+  navigation: auto;
+}
 #theme-select {
   background: none;
   border: none;
@@ -131,7 +134,10 @@ footer p, footer a {
   color: var(--gray1);
   font-family: var(--fangsong-font-family);
   font-size: var(--len-10);
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
+}
+footer a:hover {
+  color: var(--link-color);
 }
 @media (max-width: 768px) {
   :root {
