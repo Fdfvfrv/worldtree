@@ -71,10 +71,12 @@
   padding-left: var(--len-12);
   border-left: 1px dashed var(--gray1);
 }
-.post-content blockquote p {
+.post-content blockquote p,
+.post-content blockquote li {
   color: var(--gray2);
   font-family: var(--fangsong-font-family);
 }
+
 .post-content code, .post-content pre span, .post-content pre code {
   font-family: var(--monospace-font-family);
   font-size: var(--code-size);
