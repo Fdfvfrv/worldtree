@@ -61,11 +61,11 @@ $dark: (
   --text-size: 18px;
   --code-size: 16px;
   /* length */
-  --len-05: 0.5rem;
-  --len-10: 1rem;
-  --len-12: 1.2rem;
-  --len-15: 1.5rem;
-  --len-20: 2rem;
+  --rem-05: 0.5rem;
+  --rem-10: 1rem;
+  --rem-12: 1.2rem;
+  --rem-15: 1.5rem;
+  --rem-20: 2rem;
 }
 @media (prefers-color-scheme: dark) {
   :root { @include theme($dark); }
@@ -94,7 +94,7 @@ html {
 #theme-select {
   background: none;
   border: none;
-  font-size: var(--len-10);
+  font-size: var(--rem-10);
   color: var(--gray1);
 }
 
@@ -105,35 +105,52 @@ body {
   color: var(--text-color);
   max-width: 720px;
   margin: 0 auto;
-  padding: 0 var(--len-15);
+  padding: 0 var(--rem-15);
   background: var(--bg) no-repeat center fixed;
 }
 a {
   text-decoration: none;
 }
 hr {
-  margin: 5em 3rem 3rem;
+  margin: 3em 5em;
   border: none;
   height: 1px;
   background: linear-gradient(
     to right,
     transparent,
-    rgba(7, 84, 66, 0.6),
+    #07544299,
     transparent
   );
 }
 strong {
   border-bottom: 2px solid var(--highlight-color);
 }
+time {
+  font-size: var(--rem-10);
+  font-family:'Courier New', Courier, monospace;
+  color: var(--gray1);
+  writing-mode:sideways-lr;
+  align-self: center;
+  border-right: 1px dotted var(--gray2);
+}
+button.back2top {
+  position: absolute;
+  right: 3em;
+  border: none;
+  background: none;
+}
+button.back2top img {
+  width: 50px;
+}
 footer {
   display: flex;
   justify-content: space-between;
-  margin: 3rem 0 var(--len-20);
+  margin: 3rem 0 var(--rem-20);
 }
 footer p, footer a {
   color: var(--gray1);
   font-family: var(--fangsong-font-family);
-  font-size: var(--len-10);
+  font-size: var(--code-size);
   letter-spacing: 0.5px;
 }
 footer a:hover {

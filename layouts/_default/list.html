@@ -3,25 +3,26 @@
 {{ if .IsHome }}
   <div class="post-list">
     {{ range where .Site.RegularPages "Section" "posts" }}
-    <article class="post-card">
-      <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
-      {{ if .Summary }}<summary>{{ .Summary }}</summary>{{ end }}
-    </article>
+    <a class="post-card" href="{{ .Permalink }}">
+      <time>{{ .Date.Format "01-02" }}</time>
+      <article>
+        <h2>{{ .Title }}</h2>
+        {{ if .Summary }}<p class="sum">{{ .Summary }}</p>{{ end }}
+      </article>
+    </a>
     {{ end }}
   </div>
-
 {{ else }}
   <div class="post-list">
     <a href="/"><h1>{{ .Title }}</h1></a>
     {{ .Content }}
     {{ range .Pages }}
-    <article class="post-card">
-      <a href="{{ .Permalink }}"><h2>{{ .Title }}</h2></a>
+    <a class="post-card" href="{{ .Permalink }}">
+      <h2>{{ .Title }}</h2>
       {{ if .Summary }}<summary>{{ .Summary }}</summary>{{ end }}
-    </article>
+    </a>
     {{ end }}
   </div>
-
 {{ end }}
 
 {{ end }}

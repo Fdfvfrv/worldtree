@@ -29,13 +29,15 @@
     </select>
     <nav>
       <li><a href="/links/">果壳铃</a></li>
-      <li><a href="/about/">树</a></li>
+      <li><a href="/about/">年轮</a></li>
       <li><a href="/fun/">根系</a></li>
     </nav>
   </header>
   {{ end }}
   <main class="site-main">
-    {{ block "main" . }}{{ end }}
+    {{ block "main" . }}
+    {{ end }}
+    <button class="back2top"><img src="../img/button.svg" /></button>
   </main>
   {{ if .IsHome }}
   <hr>

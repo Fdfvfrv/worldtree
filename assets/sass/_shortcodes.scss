@@ -48,7 +48,7 @@
 }
 .link-card a {
   color: var(--link-color);
-  font-size: var(--len-10);
+  font-size: var(--rem-10);
   display: block;
   text-align: center;
   margin-bottom: 0.35rem;
@@ -58,13 +58,13 @@
   font-family: var(--fangsong-font-family);
   text-align: center;
   vertical-align: middle;
-  padding: 0 var(--len-15);
+  padding: 0 var(--rem-15);
   line-height: 1.5;
 }
 @media (max-width: 768px) {
   .link-list {
-  gap: var(--len-10);
-  margin-top: var(--len-15);
+  gap: var(--rem-10);
+  margin-top: var(--rem-15);
   }
 }
 @media (max-width: 1024px) {
@@ -82,7 +82,7 @@
 .fun-list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: var(--len-10);
+  gap: var(--rem-10);
   margin-top: 3em;
   justify-content: center;
 }
@@ -108,5 +108,5 @@
 }
 /* details */
 details {
-  margin-bottom: var(--len-10);
+  margin-bottom: var(--rem-10);
 }

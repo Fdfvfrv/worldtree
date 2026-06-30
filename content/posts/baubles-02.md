@@ -3,7 +3,6 @@ date = '2026-06-27T21:14:48+08:00'
 draft = false
 title = 'Baubles 02'
 summary = '与自然共处'
-tags = ['Baubles']
 +++
 > Baubles 构成如下：
 > 1. Varnish（工具、资源分享）
@@ -99,6 +98,5 @@ tags = ['Baubles']
   还想做个音乐卡片。                             
   同时在考虑「Back2Top」的实现方案，我得做一个「契合调性」的。          
 - 人不可能创造出自己从未见过的事物，本站的设计灵感许多来自于[極客死亡計劃](https://www.geedea.pro/)（也可以说成「模仿」）。当然，巧思是我自己的，许多用语和措辞都让我觉得自己在「创造」一个世界。
-- 努力尝试把脑内纷繁缭乱的思考以文本的形式呈现出来，希望自己不要再「反思反思」了。就是刻奇、自我标签化（噼里啪啦的名词砸过来中——）……又怎样？我没有伤害任何人吧，反而一直在跟自己斗殴啊（尖叫）
 
 [^1]: [Calculus Made Easy](https://www.gutenberg.org/ebooks/33283)；[简中译本](https://keen-ginger-62hw.here.now/)

@@ -39,11 +39,11 @@
   --text-size: 18px;
   --code-size: 16px;
   /* length */
-  --len-05: 0.5rem;
-  --len-10: 1rem;
-  --len-12: 1.2rem;
-  --len-15: 1.5rem;
-  --len-20: 2rem; }
+  --rem-05: 0.5rem;
+  --rem-10: 1rem;
+  --rem-12: 1.2rem;
+  --rem-15: 1.5rem;
+  --rem-20: 2rem; }
 
 @media (prefers-color-scheme: dark) {
   :root {
@@ -90,7 +90,7 @@ html {
 #theme-select {
   background: none;
   border: none;
-  font-size: var(--len-10);
+  font-size: var(--rem-10);
   color: var(--gray1); }
 
 body {
@@ -100,7 +100,7 @@ body {
   color: var(--text-color);
   max-width: 720px;
   margin: 0 auto;
-  padding: 0 var(--len-15);
+  padding: 0 var(--rem-15);
   background: var(--bg) no-repeat center fixed; }
 
 a {
@@ -117,7 +117,7 @@ strong {
 
 footer {
   text-align: center;
-  margin: 3rem 0 var(--len-20);
+  margin: 3rem 0 var(--rem-20);
   color: var(--gray1);
   font-size: 0.85rem; }
 
@@ -130,22 +130,22 @@ footer a {
     --code-size: 14px; }
   .site-header {
     flex-direction: column;
-    gap: var(--len-05);
+    gap: var(--rem-05);
     margin-bottom: 0;
     text-align: center; }
   nav a:first-child {
     margin-left: 0; }
   .post-header h1 {
-    font-size: var(--len-15); }
+    font-size: var(--rem-15); }
   .post-content h2 {
-    font-size: var(--len-12); }
+    font-size: var(--rem-12); }
   .post-content h3 {
-    font-size: var(--len-10); }
+    font-size: var(--rem-10); }
   .post-content blockquote {
-    padding-left: var(--len-05); }
+    padding-left: var(--rem-05); }
   .post-content pre {
-    padding: var(--len-05);
-    margin-bottom: var(--len-10); } }
+    padding: var(--rem-05);
+    margin-bottom: var(--rem-10); } }
 
 @media (max-width: 600px) {
   body {

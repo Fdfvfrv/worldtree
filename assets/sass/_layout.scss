@@ -3,11 +3,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: var(--len-20) 0;
-  margin: var(--len-20) 0;
+  padding: var(--rem-20) 0;
+  margin: var(--rem-10) 0;
 }
 .site-title {
-  font: oblique var(--len-15) var(--heading-font);
+  font: oblique var(--rem-15) var(--heading-font);
   color: var(--text-color);
 }
 nav {
@@ -25,7 +25,6 @@ nav a {
   font-size: 0.95rem;
   color: var(--deco-color);
 }
-
 /* post-list */
 .post-list {
   display: flex;
@@ -34,38 +33,40 @@ nav a {
 }
 .post-list h1 {
   font-family: var(--heading-font);
-  font-size: var(--len-15);
+  font-size: var(--rem-15);
   color: var(--highlight-color);
-  margin: var(--len-15) 0 var(--len-10);
+  margin: var(--rem-15) 0 var(--rem-10);
 }
 .post-list h1::before {
   content: "▸ ";
 }
-.post-list p {
-  font-family: var(--fangsong-font-family);
-  text-align: center;
-}
-.post-list a {
-  color: var(--highlight-color);
-}
-.post-card a,
-.post-card p {
-  color: var(--text-color);
+/* post-card */
+.post-card {
+  display: grid;
+  grid-template-columns: auto 1fr; 
+  gap: var(--rem-10);
+  padding-left: var(--rem-05);
+  color: inherit;
+  justify-content: space-between;
 }
 .post-card h2 {
   font-size: 1.3rem;
   margin-bottom: 0.25rem;
 }
-.post-card summary {
+.post-card p.sum {
   font-family: var(--fangsong-font-family);
-  margin-bottom: var(--len-05);
+  margin-bottom: var(--rem-05);
   color: var(--gray2);
 }
+.post-card a {
+  color: var(--text-color);
+}
+
 @media (max-width: 600px) {
   .site-header {
     flex-direction: column;
-    gap: var(--len-05);
-    margin-bottom: var(--len-10);
+    gap: var(--rem-10);
+    margin-bottom: var(--rem-10);
     text-align: center;
   }
 }

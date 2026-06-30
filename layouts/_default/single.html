@@ -2,9 +2,6 @@
 <article>
   <header class="post-header">
     <a href="/"><h1>{{ .Title }}</h1></a>
-    {{ if not .Date.IsZero}}
-    <create-time>{{ .Date.Format "2006-01-02 Mon" }}</create-time>
-    {{ end }}
   </header>
   <article class="post-content">
     {{ .Content }}

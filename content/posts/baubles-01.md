@@ -3,7 +3,6 @@ date = '2026-06-21T00:18:26+08:00'
 draft = false
 title = 'Baubles 01'
 summary = '圣诞装饰球与泡泡🫧'
-tags = ['Baubles']
 +++
 > Bauble：装饰球，比如圣诞树上挂着的那些；双唇音，发音时很像吐泡泡，比真正的泡泡 Bubble 更像，因为口腔更圆。                            
 > 某个相当可爱的[模组](https://www.nexusmods.com/stardewvalley/mods/29720)就叫这个，非常契合内容，本系列的名字也来源于此。        
