@@ -23,13 +23,11 @@ $dark: (
     /* bg-dark */
     --bg: url("../img/bg-dark.png")
 );
-
 @mixin theme($map) { 
   @each $key, $val in $map {
     #{$key}: #{$val};
   }
 }
-
 :root {
   @include theme($light);
   /* font */
@@ -87,7 +85,6 @@ $dark: (
 html {
   scroll-behavior: smooth;
 }
-
 @view-transition {
   navigation: auto;
 }
@@ -97,7 +94,9 @@ html {
   font-size: var(--rem-10);
   color: var(--gray1);
 }
-
+// #back2top {
+  
+// }
 body {
   font-family: var(--serif-font-family);
   font-size: var(--text-size);
@@ -131,16 +130,7 @@ time {
   color: var(--gray1);
   writing-mode:sideways-lr;
   align-self: center;
-  border-right: 1px dotted var(--gray2);
-}
-button.back2top {
-  position: absolute;
-  right: 3em;
-  border: none;
-  background: none;
-}
-button.back2top img {
-  width: 50px;
+  border-right: 1.5px dotted var(--gray1);
 }
 footer {
   display: flex;
@@ -165,5 +155,8 @@ footer a:hover {
 @media (max-width: 600px) {
   body {
     background: var(--deco-color);
+  }
+  time {
+    padding-right: 1px;
   }
 }

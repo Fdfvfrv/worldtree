@@ -6,6 +6,7 @@
   <link href="https://github.com/fdfvfrv" rel="me">
   <link rel="icon" href="/img/favicon.ico">
   <script src="/js/changeColorMode.js"></script>
+  {{/*  <script src="/js/back2top.js" defer></script>  */}}
   <title>
     {{ if .IsHome }}
       {{ .Site.Title }}
@@ -37,7 +38,8 @@
   <main class="site-main">
     {{ block "main" . }}
     {{ end }}
-    <button class="back2top"><img src="../img/button.svg" /></button>
+    {{/*  <button id="back2top" aria-label="返回顶部">
+    </button>  */}}
   </main>
   {{ if .IsHome }}
   <hr>
