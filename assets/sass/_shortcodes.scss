@@ -78,35 +78,3 @@
     display: none;
   }
 }
-/* fun */
-.fun-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: var(--rem-10);
-  margin-top: 3em;
-  justify-content: center;
-}
-.fun-card {
-  position: relative;
-  justify-self: center;
-  align-self: center;
-}
-.fun-card img {
-  display: block;
-  justify-self: center;
-  margin-bottom: 5px;
-  max-width: 150px;
-  height: auto;
-}
-@media (max-width: 600px) {
-  .fun-card img {
-    max-width: 100px;
-  .fun-card .fun-intro {
-    font-size: 0.6rem;
-  }
-  }
-}
-/* details */
-details {
-  margin-bottom: var(--rem-10);
-}
