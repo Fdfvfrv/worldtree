@@ -11,21 +11,26 @@ weight = 1
 **虽然尽可能地做了移动端适配，但为了最好的阅读体验，请在电脑上浏览并让窗口宽度大于1024px。**
 - 视觉引导：文本指引，减少图块。
 - 背景：电脑和平板是带有纹理的渐变图，手机暂时设置为纯色。
-- 字体：以宋体为主，观感介于黑体的纯粹和楷体的优雅之间。
+- 字体：
+  {{< details summary=" " >}}
+```css
+--serif-font-family: 
+  serif; 
+--fangsong-font-family: 
+  'STFangsong',  
+  serif;
+--monospace-font-family: 
+  'Menlo', 
+  'Monaco', 
+  monospace;
+--heading-font:
+  'STDongGuanTi',
+  sans-serif;
+```
+{{< /details >}}
 - [图标](https://www.flaticon.com/free-icon/winter_15622311?term=tree&page=1&position=85&origin=search&related_id=15622311)：很有锈味[^1]，一眼相中。
 
 ## 资源
 静态网站生成器为 [Hugo](https://gohugo.io/)，使用 [Cloudflare](https://www.cloudflare.com/) 部署。我希望尽可能地减少 JS 依赖，目前本站仅会保存的数据是明暗模式设置，且该数据存储于本地，你随时可以删除。
-
-为了拥有较好的阅读体验，建议在本地安装以下字体：
-  - [上图东观体](https://www.library.sh.cn/special/dongguanti/)
-  - [思源宋体](https://github.com/adobe-fonts/source-han-serif/tree/release/)
-
-本站字体列表（参考~~抄的~~[極客死亡計劃](https://www.geedea.pro/about/))：
-{{< details summary="展开阅读" >}}
-```css
-
-```
-{{< /details >}}
 
 [^1]: 指[解密游戏 Rusty Lake（锈湖）](https://www.rustylake.com/)

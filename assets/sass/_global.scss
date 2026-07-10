@@ -32,21 +32,9 @@ $dark: (
   @include theme($light);
   /* font */
   --serif-font-family: 
-  "Noto Serif", 
-  "Noto Serif SC", 
-  "Noto Serif TC", 
-  "Noto Serif CJK SC", 
-  "Noto Serif CJK TC", 
-  "Source Han Serif SC", 
-  "Source Han Serif TC", 
-  "Songti SC", 
-  "Times New Roman", 
-  Times, 
   serif; 
   --fangsong-font-family: 
-  'STFangsong', 
-  'FangSong', 
-  '仿宋', 
+  'STFangsong',  
   serif;
   --monospace-font-family: 
   'Menlo', 
