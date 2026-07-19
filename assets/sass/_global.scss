@@ -3,11 +3,11 @@ $light: (
   --heading-color: #152523,
   --text-color: #28312a,
   --link-color: #1e7e5c,
-  --highlight-color: #445d51,
+  --highlight-color: #395750,
   --deco-color: #cadcd3,
   --gray1: #a1a0a0,
   --gray2: #555,
-  --code-bg: #e0f0ec,
+  --code-bg: rgba(220, 238, 233, 0.5),
   /* bg */
   --bg: url("../img/bg-light.png")
   );
@@ -19,7 +19,7 @@ $dark: (
     --deco-color: #0e1511,
     --gray1: #777,
     --gray2: #aaa,
-    --code-bg: #2a2a2a,
+    --code-bg: rgba(42, 42, 42, 0.7),
     /* bg-dark */
     --bg: url("../img/bg-dark.png")
 );
@@ -40,7 +40,7 @@ $dark: (
   'Menlo', 
   'Monaco', 
   monospace;
-  --heading-font:
+  --heading-font-family:
   'STDongGuanTi',
   sans-serif;
   /* size */
@@ -110,6 +110,8 @@ hr {
   );
 }
 strong {
+  font-weight: 900;
+  padding-bottom: 1px;
   border-bottom: 2px solid var(--highlight-color);
 }
 time {

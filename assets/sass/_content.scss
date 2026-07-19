@@ -3,7 +3,7 @@
   margin-bottom: var(--rem-10);
 }
 .post-header h1 {
-  font-family: var(--heading-font);
+  font-family: var(--heading-font-family);
   font-size: var(--rem-20);
   color: var(--heading-color);
   margin: var(--rem-20) 0;
@@ -18,7 +18,7 @@
   color: var(--link-color);
 }
 .post-content h1, .post-content h2{
-  font-family: var(--heading-font);
+  font-family: var(--heading-font-family);
   color: var(--heading-color);
 }
 .post-content h2 {
@@ -26,8 +26,7 @@
   margin: var(--rem-20) 0 var(--rem-10);
 }
 .post-content h3 {
-  color: var(--highlight-color);
-  font-family: var(--serif-font-family);
+  font-family: var(--heading-font-family);
   font-size: var(--rem-12);
   margin: var(--rem-15) 0 0.75rem;
   text-align: center;

@@ -2,7 +2,8 @@
 
 {{ if .IsHome }}
   <div class="post-list">
-    {{ range where .Site.RegularPages "Section" "posts" }}
+    {{ $s := slice "posts" "weekly"}}
+    {{ range where .Site.RegularPages "Section" "in" $s }}
     <a class="post-card" href="{{ .Permalink }}">
       <time>{{ .Date.Format "01-02" }}</time>
       <article>
@@ -18,8 +19,13 @@
     {{ .Content }}
     {{ range .Pages }}
     <a class="post-card" href="{{ .Permalink }}">
-      <h2>{{ .Title }}</h2>
-      {{ if .Summary }}<summary>{{ .Summary }}</summary>{{ end }}
+      {{ if not .Date.IsZero }}
+      <time>{{ .Date.Format "01-02" }}</time>
+      {{ end }}
+      <article>
+        <h2>{{ .Title }}</h2>
+        {{ if .Summary }}<p class="sum">{{ .Summary }}</p>{{ end }}
+      </article>
     </a>
     {{ end }}
   </div>

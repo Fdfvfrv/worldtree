@@ -1,6 +1,7 @@
 baseURL = 'https://hereis37.top/'
 locale = 'zh-cn'
 title = 'The World of A Tree'
+paginate = 7
 enableGitInfo = true
 refLinksErrorLevel = "ERROR"
 [params]

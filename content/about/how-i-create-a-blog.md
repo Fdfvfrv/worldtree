@@ -23,7 +23,7 @@ weight = 1
   'Menlo', 
   'Monaco', 
   monospace;
---heading-font:
+--heading-font-family:
   'STDongGuanTi',
   sans-serif;
 ```

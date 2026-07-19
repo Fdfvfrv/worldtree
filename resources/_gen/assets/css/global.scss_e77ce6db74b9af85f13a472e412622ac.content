@@ -32,7 +32,7 @@
   Consolas, 
   'Courier New', 
   monospace;
-  --heading-font:
+  --heading-font-family:
   'STDongGuanTi',
   sans-serif;
   /* size */

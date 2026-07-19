@@ -7,7 +7,7 @@
   margin: var(--rem-10) 0;
 }
 .site-title {
-  font: oblique var(--rem-15) var(--heading-font);
+  font: oblique var(--rem-15) var(--heading-font-family);
   color: var(--text-color);
 }
 nav {
@@ -32,7 +32,7 @@ nav a {
   gap: 2.5rem;
 }
 .post-list h1 {
-  font-family: var(--heading-font);
+  font-family: var(--heading-font-family);
   font-size: var(--rem-15);
   color: var(--highlight-color);
   margin: var(--rem-15) 0 var(--rem-10);
@@ -48,6 +48,7 @@ nav a {
   padding-left: var(--rem-05);
   color: inherit;
   justify-content: space-between;
+  align-items: center;
 }
 .post-card h2 {
   font-size: 1.3rem;
