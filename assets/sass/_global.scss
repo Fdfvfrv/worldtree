@@ -34,16 +34,18 @@ $dark: (
   --serif-font-family: 
   serif; 
   --fangsong-font-family: 
-  'STFangsong',  
+  'STFangSong',
   serif;
   --monospace-font-family: 
-  'Menlo', 
-  'Monaco', 
+  'Maple Mono NF CN',
   monospace;
   --heading-font-family:
   'STDongGuanTi',
   sans-serif;
   /* size */
+  --h1-text: var(--rem-15);
+  --h2-text: 1.4rem;
+  --h3-text: 19px;
   --text-size: 18px;
   --code-size: 16px;
   /* length */
@@ -138,6 +140,9 @@ footer a:hover {
 }
 @media (max-width: 768px) {
   :root {
+    --h1-text: 20px;
+    --h2-text: 18px;
+    --h3-text: 17px;
     --text-size: 16px;
     --code-size: 14px; 
   }

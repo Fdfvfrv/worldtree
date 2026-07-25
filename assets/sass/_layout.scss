@@ -33,7 +33,7 @@ nav a {
 }
 .post-list h1 {
   font-family: var(--heading-font-family);
-  font-size: var(--rem-15);
+  font-size: var(--h1-text);
   color: var(--highlight-color);
   margin: var(--rem-15) 0 var(--rem-10);
 }
@@ -51,7 +51,7 @@ nav a {
   align-items: center;
 }
 .post-card h2 {
-  font-size: 1.3rem;
+  font-size: var(--h2-text);
   margin-bottom: 0.25rem;
 }
 .post-card p.sum {
