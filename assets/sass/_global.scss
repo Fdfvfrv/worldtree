@@ -7,9 +7,9 @@ $light: (
   --deco-color: #cadcd3,
   --gray1: #9a9999,
   --gray2: #555,
-  --code-bg: rgba(220, 238, 233, 0.5),
+  --code-bg: rgba(220, 238, 233, 0.3),
   /* bg */
-  --bg: linear-gradient(to bottom right, #97a88ed7, #a4c0ae, #a6cdbee7)
+  --bg: linear-gradient(to bottom right, #97a88ed7, #a4c0ae, #a6cdbee7) fixed
   );
 $dark: (
 /* palatte-dark */
@@ -19,9 +19,9 @@ $dark: (
   --deco-color: #0e1511,
   --gray1: #777,
   --gray2: #aaa,
-  --code-bg: rgba(42, 42, 42, 0.7),
+  --code-bg: rgba(30, 43, 35, 0.9),
   /* bg-dark */
-  --bg: linear-gradient(to bottom right, #00160f, #131c01, #000906)
+  --bg: linear-gradient(to bottom right, #00160f, #131c01, #000906) fixed
 );
 @mixin theme($map) { 
   @each $key, $val in $map {

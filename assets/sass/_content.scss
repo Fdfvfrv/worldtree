@@ -67,7 +67,6 @@
   color: var(--gray2);
   font-family: var(--fangsong-font-family);
 }
-
 .post-content code, .post-content pre span, .post-content pre code {
   font-family: var(--monospace-font-family);
   font-size: var(--code-size);
@@ -75,7 +74,7 @@
 .post-content code {
   background: var(--code-bg);
   padding: 0.2em 0.4em;
-  margin: 0.2em 0.4em;
+  margin: 0.2em;
 }
 .post-content pre {
   filter: saturate(0.6) brightness(1.2);
