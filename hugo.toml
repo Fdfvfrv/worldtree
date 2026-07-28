@@ -1,9 +1,10 @@
 baseURL = 'https://hereis37.top/'
 locale = 'zh-cn'
 title = 'The World of A Tree'
-paginate = 7
 enableGitInfo = true
-refLinksErrorLevel = "ERROR"
+refLinksErrorLevel = "WARNING"
+[pagination]
+  pagerSize = 7
 [params]
   license = "CC BY-SA 4.0"
   licenseURL = "https://creativecommons.org/licenses/by-sa/4.0/deed.zh"

@@ -3,7 +3,8 @@
 {{ if .IsHome }}
   <div class="post-list">
     {{ $s := slice "posts" "weekly"}}
-    {{ range where .Site.RegularPages "Section" "in" $s }}
+    {{ $pages := where .Site.RegularPages "Section" "in" $s }}
+    {{ range $pages }}
     <a class="post-card" href="{{ .Permalink }}">
       <time>{{ .Date.Format "01-02" }}</time>
       <article>

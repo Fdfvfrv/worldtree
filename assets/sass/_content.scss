@@ -55,12 +55,7 @@
     content: "]";
   }
 .post-content del {
-  text-decoration: none;
-  filter: blur(5px) grayscale(80%) opacity(40%);
-  transition: filter 0.2s ease;
-}
-.post-content del:hover {
-  filter: none;
+  opacity: 0.4;
 }
 .post-content blockquote {
   margin: var(--rem-05) 0 var(--rem-15) 0;
@@ -103,12 +98,6 @@
   .post-content pre {
     padding: var(--rem-05);
     margin-bottom: var(--rem-10);
-  }
-  .post-content del {
-    text-decoration: line-through;
-    color: var(--gray2);
-    filter: none;
-    transition: none;
   }
 }
 @media (max-width: 600px) {

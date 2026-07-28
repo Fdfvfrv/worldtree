@@ -5,23 +5,23 @@ $light: (
   --link-color: #1e7e5c,
   --highlight-color: #395750,
   --deco-color: #cadcd3,
-  --gray1: #a1a0a0,
+  --gray1: #9a9999,
   --gray2: #555,
   --code-bg: rgba(220, 238, 233, 0.5),
   /* bg */
-  --bg: url("../img/bg-light.png")
+  --bg: linear-gradient(to bottom right, #97a88ed7, #a4c0ae, #a6cdbee7)
   );
 $dark: (
 /* palatte-dark */
-    --heading-color: #beddd0,
-    --text-color: #b0c1bb,
-    --highlight-color: #8ba293,
-    --deco-color: #0e1511,
-    --gray1: #777,
-    --gray2: #aaa,
-    --code-bg: rgba(42, 42, 42, 0.7),
-    /* bg-dark */
-    --bg: url("../img/bg-dark.png")
+  --heading-color: #beddd0,
+  --text-color: #b0c1bb,
+  --highlight-color: #8ba293,
+  --deco-color: #0e1511,
+  --gray1: #777,
+  --gray2: #aaa,
+  --code-bg: rgba(42, 42, 42, 0.7),
+  /* bg-dark */
+  --bg: linear-gradient(to bottom right, #00160f, #131c01, #000906)
 );
 @mixin theme($map) { 
   @each $key, $val in $map {
@@ -44,7 +44,7 @@ $dark: (
   sans-serif;
   /* size */
   --h1-text: var(--rem-15);
-  --h2-text: 1.4rem;
+  --h2-text: 1.3rem;
   --h3-text: 19px;
   --text-size: 18px;
   --code-size: 16px;
@@ -95,7 +95,7 @@ body {
   max-width: 720px;
   margin: 0 auto;
   padding: 0 var(--rem-15);
-  background: var(--bg) no-repeat center fixed;
+  background: var(--bg);
 }
 a {
   text-decoration: none;
@@ -148,9 +148,6 @@ footer a:hover {
   }
 }
 @media (max-width: 600px) {
-  body {
-    background: var(--deco-color);
-  }
   time {
     padding-right: 1px;
   }
