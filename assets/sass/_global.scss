@@ -9,7 +9,7 @@ $light: (
   --gray2: #555,
   --code-bg: rgba(220, 238, 233, 0.3),
   /* bg */
-  --bg: linear-gradient(to bottom right, #97a88ed7, #a4c0ae, #a6cdbee7) fixed
+  --bg: linear-gradient(to bottom right, #ddedd4d7, #d0e1d6, #a6cdbee7) fixed
   );
 $dark: (
 /* palatte-dark */
@@ -35,6 +35,7 @@ $dark: (
   serif; 
   --fangsong-font-family: 
   'STFangSong',
+  'ZhuqueFangSong',
   serif;
   --monospace-font-family: 
   'Maple Mono NF CN',
