@@ -26,7 +26,15 @@ punctuator:
     "/" : "、"
 ```
 
-而雾凇中引入预设标点符号的写法是`__include: default:/punctuator`而非[Rime教程](https://github.com/rime/home/wiki/CustomizationGuide#%E5%AE%9A%E8%A3%BD%E6%8C%87%E5%8D%97)里的`import_preset: default`。（顺便，这个补丁最好写进`rime_ice.custom.yaml`里）
+而雾凇中引入预设标点符号的写法是 `__include: default:/punctuator` 而非 [Rime教程](https://github.com/rime/home/wiki/CustomizationGuide#%E5%AE%9A%E8%A3%BD%E6%8C%87%E5%8D%97)里的 `import_preset: default`。（顺便，这个补丁最好写进 `rime_ice.custom.yaml` 里）
+
+### 针对特定 APP 自动切换为英文输入法（08-12更新）
+
+1. 获取 app 的 Bundle ID。例如：`osascript -e 'id of app "iTerm"'`。得到返回值 `com.googlecode.iterm2` 。
+2. 新建或打开 `squirrel.custom.yaml`。
+3. 打补丁，语法 `app_options/[Bundle_ID]/ascii_mode: true`。用缩进也可以，但很容易出错。
+
+补充：我没有再使用原生输入法，`CapsLock` 键也已经被映射为 `Control` 键。假设你没有改过键盘快捷键，`⌃Space` 可以切换系统输入法。
 
 ### 重启解决一切（？）
 
